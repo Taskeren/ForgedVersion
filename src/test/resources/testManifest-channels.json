@@ -1,0 +1,19 @@
+{
+  "homepage": "https://example.com",
+  "promos": {
+    "stable-latest": "1.0.5",
+    "stable-recommended": "1.0.3",
+    "snapshot-latest": "1.0.0"
+  },
+  "stable": {
+    "1.0.0": "Initial",
+    "1.0.1": "The first update",
+    "1.0.2": "The release candidate",
+    "1.0.3": "The first release",
+    "1.0.4": "The first patch of the release",
+    "1.0.5": "The second patch of the release"
+  },
+  "snapshot": {
+    "1.0.0": "UwU"
+  }
+}
