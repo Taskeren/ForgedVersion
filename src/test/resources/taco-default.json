@@ -1,0 +1,41 @@
+{
+  "aura": {
+    "1.0.0": {
+      "changelog": "Aura initial"
+    },
+    "1.0.1": {
+      "changelog": "Added Aura Network System(ANS)"
+    },
+    "1.0.2": {
+      "changelog": "Several patches and bug fix to ANS"
+    },
+    "1.0.3": {
+      "changelog": "Fixed a important issue where unauthorized packets can cause servers down",
+      "important": true
+    },
+    "1.0.3.1": {
+      "changelog": "Unexpected exceptions removal",
+      "tiny_change": true
+    },
+    "1.0.3.2": {
+      "changelog": "Code re-arrangement and resolved several memory leaks",
+      "tiny_change": true
+    },
+    "1.0.3-final": {
+      "changelog": "Finalize"
+    },
+    "not-semi-version": {
+      "changelog": "Some bad things"
+    },
+    "aura-forge": {
+      "1.0.0": {
+        "changelog": "Aura Forge initial"
+      }
+    },
+    "aura-fabric": {
+      "1.0.0": {
+        "changelog": "Aura Fabric initial"
+      }
+    }
+  }
+}

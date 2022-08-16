@@ -1,7 +1,7 @@
 package cn.taskeren.version.cli
 
-import cn.taskeren.version.ForgedVersion
-import cn.taskeren.version.ForgedVersionChannel
+import cn.taskeren.version.forge.ForgedVersion
+import cn.taskeren.version.forge.ForgedVersionChannel
 import com.google.gson.GsonBuilder
 import java.io.File
 

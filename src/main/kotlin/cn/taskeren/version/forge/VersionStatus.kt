@@ -1,4 +1,4 @@
-package cn.taskeren.version
+package cn.taskeren.version.forge
 
 enum class VersionStatus {
 

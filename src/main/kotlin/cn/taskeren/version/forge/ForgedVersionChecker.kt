@@ -1,17 +1,21 @@
 @file:Suppress("UNCHECKED_CAST")
 
-package cn.taskeren.version
+package cn.taskeren.version.forge
 
-import cn.taskeren.version.VersionStatus.*
+import cn.taskeren.version.forge.VersionStatus.*
 import com.google.gson.*
 import org.apache.maven.artifact.versioning.ComparableVersion
 
+@Deprecated("deprecated")
+@Suppress("DEPRECATION")
 object ForgedVersionChecker {
 
 	@JvmStatic
+	@Deprecated("deprecated", replaceWith = ReplaceWith("ForgedVersion.fromJson(versionJsonStr)"))
 	fun fromString(versionJsonStr: String): ForgedVersion = fromJson(JsonParser.parseString(versionJsonStr))
 
 	@JvmStatic
+	@Deprecated("deprecated", replaceWith = ReplaceWith("ForgedVersion.fromJson(versionJson)"))
 	fun fromJson(versionJson: JsonElement): ForgedVersion {
 
 		val json = Gson().fromJson<Map<String, Any>>(versionJson, Map::class.java)
@@ -57,7 +61,14 @@ object ForgedVersionChecker {
 	}
 
 	@JvmStatic
-	fun check(channelVer: String, versionJsonStr: String, currentVersionStr: String): Result {
+	@Deprecated(
+		"deprecated",
+		replaceWith = ReplaceWith(
+			expression = "ForgedVersion.fromJson(versionJsonStr).check(channelVer, ComparableVersion(currentVersionStr))",
+			imports = ["org.apache.maven.artifact.versioning.ComparableVersion"]
+		)
+	)
+	fun check(channelVer: String, versionJsonStr: String, currentVersionStr: String): VersionCheckResult {
 
 		var status = PENDING
 		val curVer = ComparableVersion(currentVersionStr)
@@ -121,17 +132,7 @@ object ForgedVersionChecker {
 			status = FAILED
 		}
 
-		return Result(status, curVer, targetVer, changes, homepage)
-	}
-
-	data class Result(
-		val status: VersionStatus,
-		val current: ComparableVersion?,
-		val target: ComparableVersion?,
-		val changes: LinkedHashMap<ComparableVersion, String>,
-		val homepage: String?
-	) {
-		fun printForgeLog() = println("Found status: $status Current: $current Target: $target")
+		return VersionCheckResult(status, curVer, targetVer, changes, homepage)
 	}
 
 }

@@ -1,6 +1,6 @@
 package cn.taskeren
 
-import cn.taskeren.version.ForgedVersion
+import cn.taskeren.version.forge.ForgedVersion
 import com.google.gson.GsonBuilder
 import org.junit.Test
 

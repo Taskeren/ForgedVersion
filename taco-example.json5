@@ -1,0 +1,15 @@
+{
+  "taco": {
+    // 使用版本号作为名称，作为一个版本实例
+    "1.0.0": {
+      "changelog": "这是 Taco Version 的第一个版本",
+      "recommended": true
+    },
+    // 使用“父版本名称-子版本名称”，作为子版本实例
+    "taco-snapshot": {
+      "1.0.0": {
+        "changelog": "这是 Taco Version 快照版的第一个版本"
+      }
+    }
+  }
+}

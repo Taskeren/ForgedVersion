@@ -1,6 +1,6 @@
 @file:Suppress("MemberVisibilityCanBePrivate")
 
-package cn.taskeren.version
+package cn.taskeren.version.forge
 
 import org.apache.maven.artifact.versioning.ComparableVersion
 
